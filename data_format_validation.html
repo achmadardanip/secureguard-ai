@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureGuard AI | Data Format Validation</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> <span>
+                                <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                                 </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
+                                 </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="profile.html">Profile</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a href="mailbox.html">Mailbox</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            SG+
+                        </div>
+                    </li>
+                    <li>
+                        <a href="dashboard_2.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-database"></i> <span class="nav-label">Data Classification</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="data_synchronization.html">Data Synchronization</a></li>
+                            <li><a href="data_format_validation.html">Data Format Validation</a></li>
+                            <li><a href="data_classification_and_labeling.html">Data Classification and Labeling</a></li>
+                            <li><a href="data_classification_reports.html">Data Classification Reports</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-exclamation-triangle"></i> <span class="nav-label">Anomaly Detection</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="activity_monitoring.html">Activity Monitoring</a></li>
+                            <li><a href="anomaly_log_recording.html">Anomaly Log Recording</a></li>
+                            <li><a href="suspicious_pattern_detection.html">Suspicious Pattern Detection with AI</a></li>
+                            <li><a href="notifications_and_migration_actions.html">Notifications and Migration Actions</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user-secret"></i> <span class="nav-label">User Behavior Analysis</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="behavior_monitoring.html">Behavior Monitoring</a></li>
+                            <li><a href="risk_notifications.html">Risk Notifications</a></li>
+                            <li><a href="pattern_identification.html">Pattern Identification with AI</a></li>
+                            <li><a href="user_risk_score.html">User Risk Score</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-lock"></i> <span class="nav-label">Data Encryption & Policy Enforcement</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="security_policy_settings.html">Security Policy Settings</a></li>
+                            <li><a href="data_encryption.html">Data Encryption and Decryption</a></li>
+                            <li><a href="module_access_control.html">Module Access Control</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-shield"></i> <span class="nav-label">Threat/Incident Handling</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="threat_detection.html">Threat Detection and Monitoring</a></li>
+                            <li><a href="incident_log_recording.html">Incident Log Recording</a></li>
+                            <li><a href="analysis_and_handling.html">Analysis and Handling with AI</a></li>
+                            <li><a href="device_isolation.html">Device Isolation</a></li>
+                            <li><a href="notification_to_related_parties.html">Notification to Related Parties</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">System Settings</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="user_management.html">User Management</a></li>
+                            <li><a href="security_policy_configuration.html">Security Policy Configuration</a></li>
+                            <li><a href="integration_and_api.html">Integration & API</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart"></i> <span class="nav-label">Reports and Analytics</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="security_reports.html">Security Reports</a></li>
+                            <li><a href="data_analytics.html">Data Analytics</a></li>
+                            <li><a href="download_reports.html">Download Reports in PDF/CSV</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-question-circle"></i> <span class="nav-label">Help & Support</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="documentation.html">Documentation</a></li>
+                            <li><a href="technical_support_contact.html">Technical Support Contact</a></li>
+                            <li><a href="activity_and_audit_logs.html">Activity & Audit Logs</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <form role="search" class="navbar-form-custom" action="search_results.html">
+                            <div class="form-group">
+                                <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message">Welcome to SecureGuard AI.</span>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages">
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a7.jpg">
+                                        </a>
+                                        <div>
+                                            <small class="pull-right">46h ago</small>
+                                            <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
+                                            <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a4.jpg">
+                                        </a>
+                                        <div>
+                                            <small class="pull-right text-navy">5h ago</small>
+                                            <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
+                                            <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/profile.jpg">
+                                        </a>
+                                        <div>
+                                            <small class="pull-right">23h ago</small>
+                                            <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
+                                            <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="mailbox.html">
+                                            <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="mailbox.html">
+                                        <div>
+                                            <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="profile.html">
+                                        <div>
+                                            <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                            <span class="pull-right text-muted small">12 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="grid_options.html">
+                                        <div>
+                                            <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="notifications.html">
+                                            <strong>See All Alerts</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="login.html">
+                                <i class="fa fa-sign-out"></i> Log out
+                            </a>
+                        </li>
+                        <li>
+                            <a class="right-sidebar-toggle">
+                                <i class="fa fa-tasks"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="wrapper wrapper-content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>Data Format Validation</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <p>Our AI system validates data format for consistency and accuracy. Upload your data to get started.</p>
+                                <div class="hero-section">
+                                    <h1>Data Format Validation</h1>
+                                    <p>Ensuring Data Consistency with AI Accuracy</p>
+                                    <div class="animated-graphic">
+                                        <!-- Add animated graphic here -->
+                                    </div>
+                                </div>
+                                <div class="file-upload-area">
+                                    <div class="drop-zone">
+                                        <span class="drop-zone__prompt">Drag & Drop or Browse Files</span>
+                                        <input type="file" name="file" class="drop-zone__input">
+                                    </div>
+                                </div>
+                                <div class="side-by-side-preview">
+                                    <div class="live-preview">
+                                        <!-- Live preview of uploaded data -->
+                                    </div>
+                                    <div class="ai-analysis">
+                                        <!-- AI-generated format analysis -->
+                                    </div>
+                                </div>
+                                <div class="analyzing-data">
+                                    <p>Analyzing Data</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped active" role="progressbar" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                                <div class="interactive-cards">
+                                    <div class="result-card">
+                                        <div class="result-icon">
+                                            <!-- Green checkmark or red warning icon -->
+                                        </div>
+                                        <div class="result-message">
+                                            <!-- Valid or invalid data format message -->
+                                        </div>
+                                    </div>
+                                    <div class="suggestions-card">
+                                        <h5>Suggestions</h5>
+                                        <ul class="suggestions-list">
+                                            <!-- List of suggestions with Quick Fix buttons -->
+                                        </ul>
+                                        <button class="btn btn-primary" id="viewAllCorrectionsBtn">View All Corrections</button>
+                                    </div>
+                                    <div class="insights-card">
+                                        <h5>Insights</h5>
+                                        <div class="insights-content">
+                                            <!-- AI-generated predictions and data trends -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="error-summary-table">
+                                    <h5>Error Summary</h5>
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Field Name</th>
+                                                <th>Detected Format</th>
+                                                <th>Expected Format</th>
+                                                <th>Suggestions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Error summary rows -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="error-distribution-chart">
+                                    <h5>Error Distribution</h5>
+                                    <div id="chartContainer" style="height: 300px;"></div>
+                                </div>
+                                <button class="btn btn-primary" id="proceedToNextStepBtn">Proceed to Next Step</button>
+                                <div class="celebratory-touch">
+                                    <!-- Add celebratory touch here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="pull-right">
+                    10GB of <strong>250GB</strong> Free.
+                </div>
+                <div>
+                    <strong>Copyright</strong> SecureGuard AI &copy; 2023
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- Chart.js -->
+    <script src="js/plugins/chartJs/Chart.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#uploadDataBtn').on('click', function() {
+                $('#processingCard').show();
+                // Simulate AI processing
+                setTimeout(function() {
+                    $('#processingCard').hide();
+                    $('#resultsCard').show();
+                    $('#resultsMessage').html('<div class="alert alert-success"><i class="fa fa-check"></i> Data format is valid.</div>');
+                    $('#nextStepBtn').show();
+                }, 3000);
+            });
+
+            $('#nextStepBtn').on('click', function() {
+                alert('Proceeding to the next step.');
+            });
+        });
+    </script>
+</body>
+
+</html>

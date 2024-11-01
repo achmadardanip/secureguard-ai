@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureGuard AI | Data Synchronization</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> <span>
+                                <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                            </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
+                                </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="profile.html">Profile</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a href="mailbox.html">Mailbox</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            SG+
+                        </div>
+                    </li>
+                    <li class="">
+                        <a href="dashboard_2.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="#"><i class="fa fa-database"></i> <span class="nav-label">Data Classification</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse in">
+                            <li class="active"><a href="data_synchronization.html">Data Synchronization</a></li>
+                            <li><a href="#">Data Format Validation</a></li>
+                            <li><a href="#">Data Classification and Labeling</a></li>
+                            <li><a href="#">Data Classification Reports</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-exclamation-triangle"></i> <span class="nav-label">Anomaly Detection</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">Activity Monitoring</a></li>
+                            <li><a href="#">Anomaly Log Recording</a></li>
+                            <li><a href="#">Suspicious Pattern Detection with AI</a></li>
+                            <li><a href="#">Notifications and Migration Actions</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user-secret"></i> <span class="nav-label">User Behavior Analysis</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">Behavior Monitoring</a></li>
+                            <li><a href="#">Risk Notifications</a></li>
+                            <li><a href="#">Pattern Identification with AI</a></li>
+                            <li><a href="#">User Risk Score</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-lock"></i> <span class="nav-label">Data Encryption & Policy Enforcement</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">Security Policy Settings</a></li>
+                            <li><a href="#">Data Encryption and Decryption</a></li>
+                            <li><a href="#">Module Access Control</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-shield"></i> <span class="nav-label">Threat/Incident Handling</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">Threat Detection and Monitoring</a></li>
+                            <li><a href="#">Incident Log Recording</a></li>
+                            <li><a href="#">Analysis and Handling with AI</a></li>
+                            <li><a href="#">Device Isolation</a></li>
+                            <li><a href="#">Notification to Related Parties</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">System Settings</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">User Management</a></li>
+                            <li><a href="#">Security Policy Configuration</a></li>
+                            <li><a href="#">Integration & API</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart"></i> <span class="nav-label">Reports and Analytics</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">Security Reports</a></li>
+                            <li><a href="#">Data Analytics</a></li>
+                            <li><a href="#">Download Reports in PDF/CSV</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-question-circle"></i> <span class="nav-label">Help & Support</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Technical Support Contact</a></li>
+                            <li><a href="#">Activity & Audit Logs</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <form role="search" class="navbar-form-custom" action="search_results.html">
+                            <div class="form-group">
+                                <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message">Welcome to SecureGuard AI.</span>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages">
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a7.jpg">
+                                        </a>
+                                        <div>
+                                            <small class="pull-right">46h ago</small>
+                                            <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
+                                            <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a4.jpg">
+                                        </a>
+                                        <div>
+                                            <small class="pull-right text-navy">5h ago</small>
+                                            <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
+                                            <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/profile.jpg">
+                                        </a>
+                                        <div>
+                                            <small class="pull-right">23h ago</small>
+                                            <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
+                                            <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="mailbox.html">
+                                            <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="mailbox.html">
+                                        <div>
+                                            <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="profile.html">
+                                        <div>
+                                            <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                            <span class="pull-right text-muted small">12 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="grid_options.html">
+                                        <div>
+                                            <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="notifications.html">
+                                            <strong>See All Alerts</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="login.html">
+                                <i class="fa fa-sign-out"></i> Log out
+                            </a>
+                        </li>
+                        <li>
+                            <a class="right-sidebar-toggle">
+                                <i class="fa fa-tasks"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="wrapper wrapper-content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>Data Synchronization</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="sync-options">
+                                    <h3>Select Data Source</h3>
+                                    <select id="data-source" class="form-control">
+                                        <option value="cloud">Cloud Drive (Google Drive, Dropbox)</option>
+                                        <option value="local">Local Storage (Hard Drive, Device Storage)</option>
+                                        <option value="network">Network Storage (NAS, Shared Server)</option>
+                                        <option value="secureguard">SecureGuard Backup</option>
+                                    </select>
+                                    <div id="auth-prompt" class="alert alert-warning" style="display:none;">
+                                        Please authenticate with your credentials.
+                                    </div>
+                                    <button id="sync-now" class="btn btn-primary m-t">Synchronize Now</button>
+                                    <div id="sync-progress" class="progress m-t" style="display:none;">
+                                        <div class="progress-bar progress-bar-striped active" role="progressbar" style="width: 0%;"></div>
+                                    </div>
+                                    <div id="sync-result" class="alert alert-info m-t" style="display:none;"></div>
+                                    <h3>Schedule Synchronization</h3>
+                                    <select id="sync-schedule" class="form-control">
+                                        <option value="daily">Daily</option>
+                                        <option value="weekly">Weekly</option>
+                                        <option value="monthly">Monthly</option>
+                                    </select>
+                                    <h3>Customize Synchronization</h3>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value="documents"> Documents</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value="media"> Media Files</label>
+                                    </div>
+                                    <h3>Summary of Selected Settings</h3>
+                                    <div id="sync-summary" class="alert alert-info">
+                                        <p>Data Source: <span id="summary-source">None</span></p>
+                                        <p>Schedule: <span id="summary-schedule">None</span></p>
+                                        <p>Data Types: <span id="summary-types">None</span></p>
+                                    </div>
+                                </div>
+                                <div class="tabbed-selection">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a data-toggle="tab" href="#sync-now">Sync Now</a></li>
+                                        <li><a data-toggle="tab" href="#sync-history">Sync History</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div id="sync-now" class="tab-pane fade in active">
+                                            <h3>Sync Now</h3>
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sync Date</th>
+                                                        <th>Source</th>
+                                                        <th>Data Type</th>
+                                                        <th>Status</th>
+                                                        <th>Duration</th>
+                                                        <th>Details</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>2023-10-01</td>
+                                                        <td>Cloud Drive</td>
+                                                        <td>Documents</td>
+                                                        <td>Success</td>
+                                                        <td>5 mins</td>
+                                                        <td>50 files synced</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2023-10-02</td>
+                                                        <td>Local Storage</td>
+                                                        <td>Media Files</td>
+                                                        <td>Failure</td>
+                                                        <td>3 mins</td>
+                                                        <td>Network error</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div id="sync-history" class="tab-pane fade">
+                                            <h3>Sync History</h3>
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sync Date</th>
+                                                        <th>Source</th>
+                                                        <th>Data Type</th>
+                                                        <th>Status</th>
+                                                        <th>Duration</th>
+                                                        <th>Details</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>2023-09-25</td>
+                                                        <td>Network Storage</td>
+                                                        <td>Documents</td>
+                                                        <td>Success</td>
+                                                        <td>10 mins</td>
+                                                        <td>100 files synced</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2023-09-26</td>
+                                                        <td>SecureGuard Backup</td>
+                                                        <td>Media Files</td>
+                                                        <td>Success</td>
+                                                        <td>8 mins</td>
+                                                        <td>200 files synced</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="filter-options">
+                                                <h4>Filter Options</h4>
+                                                <select id="filter-date" class="form-control">
+                                                    <option value="all">All Dates</option>
+                                                    <option value="today">Today</option>
+                                                    <option value="this-week">This Week</option>
+                                                    <option value="this-month">This Month</option>
+                                                </select>
+                                                <select id="filter-source" class="form-control">
+                                                    <option value="all">All Sources</option>
+                                                    <option value="cloud">Cloud Drive</option>
+                                                    <option value="local">Local Storage</option>
+                                                    <option value="network">Network Storage</option>
+                                                    <option value="secureguard">SecureGuard Backup</option>
+                                                </select>
+                                                <select id="filter-status" class="form-control">
+                                                    <option value="all">All Statuses</option>
+                                                    <option value="success">Success</option>
+                                                    <option value="failure">Failure</option>
+                                                </select>
+                                            </div>
+                                            <button id="export-history" class="btn btn-primary m-t">Export History</button>
+                                            <button id="clear-history" class="btn btn-danger m-t">Clear History</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="pull-right">
+                    10GB of <strong>250GB</strong> Free.
+                </div>
+                <div>
+                    <strong>Copyright</strong> SecureGuard AI &copy; 2023
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Start data synchronization process
+            function startDataSynchronization() {
+                // Simulate data synchronization process
+                setTimeout(function() {
+                    var success = Math.random() >= 0.5; // Simulate success or failure
+                    if (success) {
+                        $('#sync-message').removeClass('alert-info').addClass('alert-success').text('Synchronization successful');
+                    } else {
+                        $('#sync-message').removeClass('alert-info').addClass('alert-danger').text('Synchronization failed. Please try again.');
+                    }
+                }, 2000); // Simulate 2 seconds delay for synchronization
+            }
+
+            // Start synchronization on page load
+            startDataSynchronization();
+
+            // Handle data source selection
+            $('#data-source').change(function() {
+                var selectedSource = $(this).val();
+                if (selectedSource === 'cloud' || selectedSource === 'network') {
+                    $('#auth-prompt').show();
+                } else {
+                    $('#auth-prompt').hide();
+                }
+            });
+
+            // Handle synchronize now button click
+            $('#sync-now').click(function() {
+                $('#sync-progress').show();
+                $('#sync-result').hide();
+                var progressBar = $('#sync-progress .progress-bar');
+                progressBar.css('width', '0%');
+                var interval = setInterval(function() {
+                    var width = parseInt(progressBar.css('width')) + 10;
+                    progressBar.css('width', width + '%');
+                    if (width >= 100) {
+                        clearInterval(interval);
+                        var success = Math.random() >= 0.5; // Simulate success or failure
+                        if (success) {
+                            $('#sync-result').removeClass('alert-success').addClass('alert-success').text('Synchronization from ' + $('#data-source option:selected').text() + ' successful').show();
+                        } else {
+                            $('#sync-result').removeClass('alert-info').addClass('alert-danger').text('Synchronization from ' + $('#data-source option:selected').text() + ' failed. Please try again.').show();
+                        }
+                        $('#sync-progress').hide();
+                    }
+                }, 200); // Simulate progress update every 200ms
+            });
+
+            // Handle schedule selection
+            $('#sync-schedule').change(function() {
+                $('#summary-schedule').text($(this).val());
+            });
+
+            // Handle data type selection
+            $('input[type="checkbox"]').change(function() {
+                var selectedTypes = [];
+                $('input[type="checkbox"]:checked').each(function() {
+                    selectedTypes.push($(this).val());
+                });
+                $('#summary-types').text(selectedTypes.join(', '));
+            });
+
+            // Update summary on data source change
+            $('#data-source').change(function() {
+                $('#summary-source').text($('#data-source option:selected').text());
+            });
+        });
+    </script>
+</body>
+
+</html>
