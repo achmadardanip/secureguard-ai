@@ -9,6 +9,44 @@
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Custom styles for ibox-content */
+.ibox-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+#start-classification {
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+#progress-bar-section .progress {
+    height: 25px;
+    margin-top: 20px;
+}
+
+#classification-progress {
+    background-color: #1ab394;
+}
+
+#classification-result-cards .card {
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+#classification-result-cards .card:hover {
+    transform: translateY(-5px);
+}
+
+#download-report {
+    margin-top: 20px;
+    padding: 12px 24px;
+}
+
+    </style>
 </head>
 
 <body>
@@ -22,7 +60,7 @@
                              </span>
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
-                             </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                             </span> <span class="text-muted text-xs block">Security Engineer <b class="caret"></b></span> </span> </a>
                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
                                 <li><a href="profile.html">Profile</a></li>
                                 <li><a href="contacts.html">Contacts</a></li>
@@ -38,7 +76,7 @@
                     <li>
                         <a href="dashboard_2.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="#"><i class="fa fa-database"></i> <span class="nav-label">Data Classification</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="data_synchronization.html">Data Synchronization</a></li>
@@ -83,7 +121,7 @@
                             <li><a href="notification_to_related_parties.html">Notification to Related Parties</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">System Settings</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="user_management.html">User Management</a></li>
@@ -98,15 +136,15 @@
                             <li><a href="data_analytics.html">Data Analytics</a></li>
                             <li><a href="download_reports.html">Download Reports in PDF/CSV</a></li>
                         </ul>
-                    </li>
-                    <li>
+                    </li> -->
+                    <!-- <li>
                         <a href="#"><i class="fa fa-question-circle"></i> <span class="nav-label">Help & Support</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="documentation.html">Documentation</a></li>
                             <li><a href="technical_support_contact.html">Technical Support Contact</a></li>
                             <li><a href="activity_and_audit_logs.html">Activity & Audit Logs</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </nav>
@@ -241,21 +279,53 @@
                             <div class="ibox-title">
                                 <h5>Data Classification and Labeling</h5>
                             </div>
-                            <div class="ibox-content">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <button class="btn btn-primary" id="start-classification">Start Data Classification</button>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <h3>Classification Results</h3>
-                                        <div id="classification-results">
-                                            <!-- Classification results will be displayed here -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<div class="ibox-content">
+    <div class="row text-center">
+        <button class="btn btn-lg btn-primary" id="start-classification"><i class="fa fa-play"></i> Start Data Classification</button>
+    </div>
+    <div class="row mt-5" id="progress-bar-section" style="display: none;">
+        <div class="col-lg-12 text-center">
+            <div class="spinner-border text-primary mb-3" role="status">
+                <span class="sr-only">Processing...</span>
+            </div>
+            <h4 class="font-weight-bold">Data Classification in Progress...</h4>
+            <div class="progress mt-3" style="height: 30px;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 0%;" id="classification-progress"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5" id="classification-result-cards" style="display: none;">
+        <div class="col-md-12 text-center">
+            <canvas id="classification-chart" width="400" height="200"></canvas>
+        </div>
+        <div class="col-md-6 mt-4">
+            <div class="card text-center shadow-sm">
+                <div class="card-header bg-danger text-white">
+                    <h5 class="card-title"><i class="fa fa-shield"></i> Sensitive Data</h5>
+                </div>
+                <div class="card-body">
+                    <h1 id="sensitive-data-percentage">45%</h1>
+                    <p class="card-text">of your data is classified as sensitive.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mt-4">
+            <div class="card text-center shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h5 class="card-title"><i class="fa fa-users"></i> Public Data</h5>
+                </div>
+                <div class="card-body">
+                    <h1 id="public-data-percentage">55%</h1>
+                    <p class="card-text">of your data is classified as public.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center mt-4">
+        <button class="btn btn-success btn-lg" id="download-report" style="display: none;"><i class="fa fa-download"></i> Download Report</button>
+    </div>
+</div>
+
                         </div>
                     </div>
                 </div>
@@ -635,5 +705,65 @@
             });
         });
     </script>
+    <!-- Updated JavaScript for Data Classification Animation -->
+<script>
+    $(document).ready(function() {
+        $('#start-classification').click(function() {
+            $('#progress-bar-section').show();
+            $('#classification-result-cards').hide();
+            $('#download-report').hide();
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 10;
+                $('#classification-progress').css('width', progress + '%');
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    $('#progress-bar-section').hide();
+                    $('#classification-result-cards').fadeIn();
+                    $('#download-report').fadeIn();
+                }
+            }, 200);
+        });
+    });
+</script>
+<!-- Include Chart.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#start-classification').click(function() {
+            $('#progress-bar-section').show();
+            $('#classification-result-cards').hide();
+            $('#download-report').hide();
+            let progress = 0;
+            let interval = setInterval(() => {
+                progress += 5;
+                $('#classification-progress').css('width', progress + '%');
+                $('#classification-progress').text(progress + '%');
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    $('#progress-bar-section').hide();
+                    $('#classification-result-cards').fadeIn();
+                    $('#download-report').fadeIn();
+                    // Display the chart
+                    let ctx = document.getElementById('classification-chart').getContext('2d');
+                    let classificationChart = new Chart(ctx, {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['Sensitive Data', 'Public Data'],
+                            datasets: [{
+                                data: [45, 55],
+                                backgroundColor: ['#d9534f', '#5cb85c']
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false
+                        }
+                    });
+                }
+            }, 100);
+        });
+    });
+</script>
 </body>
 </html>

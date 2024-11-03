@@ -22,7 +22,7 @@
                                  </span>
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
-                                 </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                                 </span> <span class="text-muted text-xs block">Security Engineer <b class="caret"></b></span> </span> </a>
                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
                                 <li><a href="profile.html">Profile</a></li>
                                 <li><a href="contacts.html">Contacts</a></li>
@@ -38,11 +38,11 @@
                     <li>
                         <a href="dashboard_2.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
                     </li>
-                    <li>
+                    <li class ="active">
                         <a href="#"><i class="fa fa-database"></i> <span class="nav-label">Data Classification</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="data_synchronization.html">Data Synchronization</a></li>
-                            <li><a href="data_format_validation.html">Data Format Validation</a></li>
+                            <li class="active"><a href="data_format_validation.html">Data Format Validation</a></li>
                             <li><a href="data_classification_and_labeling.html">Data Classification and Labeling</a></li>
                             <li><a href="data_classification_reports.html">Data Classification Reports</a></li>
                         </ul>
@@ -83,7 +83,7 @@
                             <li><a href="notification_to_related_parties.html">Notification to Related Parties</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">System Settings</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="user_management.html">User Management</a></li>
@@ -106,7 +106,7 @@
                             <li><a href="technical_support_contact.html">Technical Support Contact</a></li>
                             <li><a href="activity_and_audit_logs.html">Activity & Audit Logs</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </nav>
@@ -241,83 +241,102 @@
                             <div class="ibox-title">
                                 <h5>Data Format Validation</h5>
                             </div>
-                            <div class="ibox-content">
-                                <p>Our AI system validates data format for consistency and accuracy. Upload your data to get started.</p>
-                                <div class="hero-section">
-                                    <h1>Data Format Validation</h1>
-                                    <p>Ensuring Data Consistency with AI Accuracy</p>
-                                    <div class="animated-graphic">
-                                        <!-- Add animated graphic here -->
-                                    </div>
-                                </div>
-                                <div class="file-upload-area">
-                                    <div class="drop-zone">
-                                        <span class="drop-zone__prompt">Drag & Drop or Browse Files</span>
-                                        <input type="file" name="file" class="drop-zone__input">
-                                    </div>
-                                </div>
-                                <div class="side-by-side-preview">
-                                    <div class="live-preview">
-                                        <!-- Live preview of uploaded data -->
-                                    </div>
-                                    <div class="ai-analysis">
-                                        <!-- AI-generated format analysis -->
-                                    </div>
-                                </div>
-                                <div class="analyzing-data">
-                                    <p>Analyzing Data</p>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-striped active" role="progressbar" style="width: 100%"></div>
-                                    </div>
-                                </div>
-                                <div class="interactive-cards">
-                                    <div class="result-card">
-                                        <div class="result-icon">
-                                            <!-- Green checkmark or red warning icon -->
-                                        </div>
-                                        <div class="result-message">
-                                            <!-- Valid or invalid data format message -->
-                                        </div>
-                                    </div>
-                                    <div class="suggestions-card">
-                                        <h5>Suggestions</h5>
-                                        <ul class="suggestions-list">
-                                            <!-- List of suggestions with Quick Fix buttons -->
-                                        </ul>
-                                        <button class="btn btn-primary" id="viewAllCorrectionsBtn">View All Corrections</button>
-                                    </div>
-                                    <div class="insights-card">
-                                        <h5>Insights</h5>
-                                        <div class="insights-content">
-                                            <!-- AI-generated predictions and data trends -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="error-summary-table">
-                                    <h5>Error Summary</h5>
-                                    <table class="table table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th>Field Name</th>
-                                                <th>Detected Format</th>
-                                                <th>Expected Format</th>
-                                                <th>Suggestions</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <!-- Error summary rows -->
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="error-distribution-chart">
-                                    <h5>Error Distribution</h5>
-                                    <div id="chartContainer" style="height: 300px;"></div>
-                                </div>
-                                <button class="btn btn-primary" id="proceedToNextStepBtn">Proceed to Next Step</button>
-                                <div class="celebratory-touch">
-                                    <!-- Add celebratory touch here -->
-                                </div>
-                            </div>
+                            <div class="ibox-content" style="background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); position: relative; overflow: hidden;">
+    <!-- Gradient Background -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));"></div>
+    <p style="font-size: 16px; color: #333; position: relative; z-index: 1;">Our AI system validates data format for consistency and accuracy. Upload your data to get started.</p>
+    <div class="hero-section" style="text-align: center; margin-bottom: 20px; position: relative; z-index: 1;">
+        <h1 style="font-size: 28px; color: #007bff; animation: fadeInDown 1s;">Data Format Validation</h1>
+        <p style="font-size: 18px; color: #555;">Ensuring Data Consistency with AI Accuracy</p>
+        <div class="animated-graphic">
+            <!-- Add animated graphic here -->
+        </div>
+    </div>
+    <div class="file-upload-area" style="margin-bottom: 20px; position: relative; z-index: 1;">
+        <div class="drop-zone" style="border: 2px dashed #007bff; padding: 20px; text-align: center; border-radius: 10px; cursor: pointer; transition: background-color 0.3s;">
+            <span class="drop-zone__prompt" style="font-size: 16px; color: #007bff;">Drag & Drop or Browse Files</span>
+            <input type="file" name="file" class="drop-zone__input" style="display: none;">
+        </div>
+    </div>
+    <div class="analyzing-data" style="margin-bottom: 20px; position: relative; z-index: 1;">
+        <p style="font-size: 16px; color: #333;">Analyzing Data</p>
+        <div class="progress" style="height: 20px; background-color: #e9ecef; border-radius: 10px; overflow: hidden;">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" style="width: 100%; background: linear-gradient(90deg, #007bff, #00d4ff); animation: progressBar 2s infinite;"></div>
+        </div>
+    </div>
+    <div class="interactive-cards" style="display: flex; justify-content: space-between; margin-bottom: 20px; position: relative; z-index: 1;">
+        <div class="result-card" style="flex: 1; margin-right: 10px; padding: 20px; background-color: #e6f7ff; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); transition: transform 0.3s;">
+            <div class="result-icon" style="text-align: center; margin-bottom: 10px; font-size: 30px; color: #28a745;">
+                ✔️
+            </div>
+            <div class="result-message" style="font-size: 16px; color: #333;">
+                Data format is valid.
+            </div>
+        </div>
+        <div class="suggestions-card" style="flex: 1; margin-left: 10px; margin-right: 10px; padding: 20px; background-color: #fff8e1; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); overflow: hidden;">
+            <h5 style="font-size: 18px; color: #ff9800;">Suggestions</h5>
+            <ul class="suggestions-list" style="list-style: none; padding: 0; font-size: 16px; color: #333; max-height: 100px; overflow-y: auto;">
+                <!-- List of suggestions with Quick Fix buttons -->
+            </ul>
+            <button class="btn btn-primary" id="viewAllCorrectionsBtn" style="margin-top: 10px;">View All Corrections</button>
+        </div>
+        <div class="insights-card" style="flex: 1; margin-left: 10px; padding: 20px; background-color: #e8f5e9; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <h5 style="font-size: 18px; color: #43a047;">Insights</h5>
+            <div class="insights-content" style="font-size: 16px; color: #333;">
+                <!-- AI-generated predictions and data trends -->
+            </div>
+        </div>
+    </div>
+    <div class="error-summary-table" style="margin-bottom: 20px; position: relative; z-index: 1;">
+        <h5 style="font-size: 18px; color: #007bff;">Error Summary</h5>
+        <table class="table table-hover" style="background-color: #fff; border-radius: 10px; overflow: hidden;">
+            <thead style="background-color: #007bff; color: #fff;">
+                <tr>
+                    <th>Field Name</th>
+                    <th>Detected Format</th>
+                    <th>Expected Format</th>
+                    <th>Suggestions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Email Address</td>
+                    <td>userexample.com</td>
+                    <td>user@example.com</td>
+                    <td><button class="btn btn-primary btn-sm">Fix Format</button></td>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td>1234567</td>
+                    <td>(123) 456-7890</td>
+                    <td><button class="btn btn-primary btn-sm">Fix Format</button></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth</td>
+                    <td>31-13-1990</td>
+                    <td>1990-12-31</td>
+                    <td><button class="btn btn-primary btn-sm">Fix Format</button></td>
+                </tr>
+                <tr>
+                    <td>ZIP Code</td>
+                    <td>1234</td>
+                    <td>12345</td>
+                    <td><button class="btn btn-primary btn-sm">Fix Format</button></td>
+                </tr>            </tbody>
+        </table>
+    </div>
+    <div class="error-distribution-chart" style="margin-bottom: 20px; position: relative; z-index: 1;">
+        <h5 style="font-size: 18px; color: #007bff;">Error Distribution</h5>
+        <div id="chartContainer" style="height: 300px;">
+            <canvas id="errorDistributionChart"></canvas>
+        </div>
+    </div>
+    <button class="btn btn-primary" id="proceedToNextStepBtn" style="margin-top: 20px; position: relative; z-index: 1;">Proceed to Next Step</button>
+    <div class="celebratory-touch" style="position: relative; z-index: 1;">
+        <!-- Add celebratory animation here -->
+    </div>
+</div>
+
                         </div>
                     </div>
                 </div>
@@ -365,6 +384,43 @@
             $('#nextStepBtn').on('click', function() {
                 alert('Proceeding to the next step.');
             });
+        });
+    </script>
+    
+    <script>
+        var ctx = document.getElementById('errorDistributionChart').getContext('2d');
+        var errorDistributionChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Email Address', 'Phone Number', 'Date of Birth', 'ZIP Code'],
+                datasets: [{
+                    label: 'Number of Errors',
+                    data: [20, 15, 10, 5],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(255, 206, 86, 0.7)',
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(255, 99, 132, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
         });
     </script>
 </body>
